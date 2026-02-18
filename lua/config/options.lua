@@ -25,3 +25,12 @@ opt.clipboard = "unnamedplus" -- Использовать системный б�
 
 opt.timeoutlen = 400 -- Время ожидания комбинаций клавиш (мс)
 
+opt.backup = false -- выключаем backup файлов
+opt.writebackup = false
+
+opt.inccommand = "split" -- display a split panel that displays all the effects of a substitution
+
+-- spell Checking
+opt.spelllang = "en_us"
+opt.spell = true
+

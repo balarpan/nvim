@@ -3,5 +3,5 @@
 -- require("config.keymaps")
 
 require("config.lazy")
--- require("lazy").setup("plugins")
-
+-- force highlight mode to fix plugins changes
+vim.cmd('highlight Visual cterm=reverse gui=reverse')
