@@ -18,6 +18,9 @@ opt.termguicolors = true -- Поддержка 24-bit цветов
 opt.mouse = "n"
 opt.wrap = false -- Автоматический перенос длинных строк
 
+opt.splitright = true   -- vertical split вправо
+opt.splitbelow = true   -- horizontal split вниз
+
 opt.undofile = false -- Сохранять историю отмен между сессиями
 opt.swapfile = false -- Отключить swap-файлы (они раздражают)
 opt.fileencoding = "utf-8" -- Кодировка файлов
