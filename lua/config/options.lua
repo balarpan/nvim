@@ -37,6 +37,9 @@ opt.writebackup = false
 
 opt.inccommand = "split" -- display a split panel that displays all the effects of a substitution
 
+-- autocomplete
+opt.completeopt = "fuzzy,menuone,noselect,popup.preview" -- add 'popup' for docs (sometimes)
+
 -- spell Checking
 opt.spelllang = "en_us"
 opt.spell = true
