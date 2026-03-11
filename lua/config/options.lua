@@ -6,6 +6,8 @@ opt.tabstop = 2 -- Какой ширины выглядит символ таб�
 opt.softtabstop = 2 -- На сколько колонок двигает/удаляет Tab и Backspace
 opt.shiftwidth = 2 -- Размер отступа для >> и <<
 
+opt.scrolloff = 10 -- keep 10 lines above and below cursor while scrolling
+
 vim.cmd [[syntax enable]]
 -- vim.cmd [[colorscheme habamax]]
 -- vim.cmd [[colorscheme kanagawa]]
