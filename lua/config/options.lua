@@ -44,6 +44,7 @@ opt.inccommand = "split" -- display a split panel that displays all the effects 
 opt.completeopt = "fuzzy,menuone,popup,preview" -- add 'popup' for docs (sometimes)
 
 -- spell Checking
-opt.spelllang = "en_us"
+-- opt.spelllang = "en_us"
+opt.spelllang = {"en_us", "ru_ru"}
 opt.spell = true
 
