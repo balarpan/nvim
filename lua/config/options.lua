@@ -45,6 +45,15 @@ opt.completeopt = "fuzzy,menuone,popup,preview" -- add 'popup' for docs (sometim
 
 -- spell Checking
 -- opt.spelllang = "en_us"
+-- На Windows нужно создать папку ~\AppData\Local\nvim\spell
+if vim.fn.has("win64") == 1 or vim.fn.has("win32") == 1 then
+  local home_dir = os.getenv("USERPROFILE")
+  local tdir = home_dir .. "\\AppData\\Local\\nvim\\spell"
+  local response = os.execute( "cd " .. tdir )
+  if response ~= 0 and home_dir then
+    os.execute("mkdir " .. tdir)
+  end
+end
 opt.spelllang = {"en_us", "ru_ru"}
 opt.spell = true
 
