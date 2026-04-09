@@ -10,7 +10,24 @@ return {
     matchup = { enable = true },
     folds = { enable = true },
     ensure_installed = {
-      "bash", "css", "html", "dockerfile", "python", "lua", "javascript", "jsdoc", "json", "latex", "markdown", "markdown_inline", "mermaid", "regex", "vim", "vimdoc", "xml", "yaml"
+      "bash",
+      "css",
+      "dockerfile",
+      "html",
+      "javascript",
+      "jsdoc",
+      "json",
+      "latex",
+      "lua",
+      "markdown",
+      "markdown_inline",
+      "mermaid",
+      "python",
+      "regex",
+      "vim",
+      "vimdoc",
+      "xml",
+      "yaml"
     }
   },
   config = function(_, opts)
