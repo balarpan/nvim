@@ -19,11 +19,14 @@ return {
     -- you still can launch installation manually
     -- Example: :TSInstall html css printf comment
     require('nvim-treesitter').install(languages)
+    auto_install = false,
 
     -- Treesitter features for installed languages must be enabled manually
     vim.api.nvim_create_autocmd("FileType", {
       pattern = languages,
       callback = function()
+        -- local filetype = vim.bo.filetype
+        -- require('nvim-treesitter').install(filetype)
         -- Enable native Neovim treesitter highlighting
         vim.treesitter.start()
 
