@@ -29,7 +29,7 @@ opt.splitbelow = true   -- horizontal split вниз
 -- opt.completeopt = "fuzzy,menuone,noselect,popup,preview" -- add 'popup' for docs (sometimes)
 opt.completeopt = "fuzzy,menuone,popup,preview" -- add 'popup' for docs (sometimes)
 opt.inccommand = "split" -- display a split panel that displays all the effects of a substitution
-opt.pumheight = 10    -- popup menu height
+-- opt.pumheight = 10    -- popup menu height
 -- opt.pumblend = 10    -- popup menu transparency
 
 
