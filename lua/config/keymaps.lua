@@ -35,4 +35,6 @@ map("n", "<C-j>", "<C-w>j", "Move down")
 map("n", "<C-k>", "<C-w>k", "Move up")
 map("n", "<C-l>", "<C-w>l", "Move right")
 
+-- Export Markdown and other currently open file into Word file in same folder
+map("n", "<leader>pw", ":w | !pandoc % -o %:r.docx<CR>", "Export to Word")
 
