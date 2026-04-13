@@ -21,7 +21,7 @@ end
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- После поиска (/something) Neovim подсвечивает все совпадения. Нажатие Esc уберёт эту подсветку.
+-- После поиска (/something) Neovim подсвечивает все совпадения. Нажатие Esc уберет эту подсветку.
 map("n", "<Esc>", ":noh<CR>", "Clear Highlight")
 
 -- вместо :bnext просто нажмите ]b, а вместо :bprevious - [b
@@ -36,5 +36,16 @@ map("n", "<C-k>", "<C-w>k", "Move up")
 map("n", "<C-l>", "<C-w>l", "Move right")
 
 -- Export Markdown and other currently open file into Word file in same folder
-map("n", "<leader>pw", ":w | !pandoc % -o %:r.docx<CR>", "Export to Word")
+local function pandoctoword()
+  local file = vim.fn.expand("%")  -- Get the current file name
+  local fileesc = vim.fn.shellescape(file)
+  local outfile = vim.fn.expand("%:r")  .. ".docx"  -- Get the current file name
+  local outfileesc = vim.fn.shellescape(outfile)
+  local confdir = vim.fn.shellescape(vim.fn.stdpath("config"))
+  local refstyle = confdir .. "/lua/assets/mystyle.docx"
+  vim.cmd(":w")
+  vim.cmd("!pandoc " .. fileesc .. " -o " .. outfileesc .. " --reference-doc=" .. refstyle)
+end
+-- map("n", "<leader>pw", ":w | !pandoc fnameescape(expand('%:p')) -o fnameescape(expand(%:r).docx<CR>", "Export to Word")
+map("n", "<leader>pw", pandoctoword, "Export to Word")
 
