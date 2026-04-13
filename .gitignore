@@ -1,3 +1,7 @@
 lazy-lock.json
 spell/
+# Word temporary owner files (e.g., ~$document.docx)
+~$*.doc*
+# Word temporary template files
+*.tmp
 
