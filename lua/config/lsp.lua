@@ -8,3 +8,9 @@ vim.diagnostic.config {
     focusable = true,
   },
 }
+
+-- Lua
+vim.lsp.enable("lua_ls");
+
+-- Python
+vim.lsp.enable("pyright");

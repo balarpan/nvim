@@ -25,7 +25,7 @@ opt.sidescrolloff = 5              -- keep 8 columns left/right cursor
 opt.wrap = false                   -- Автоматический перенос длинных строк
 opt.splitright = true              -- vertical split вправо
 opt.splitbelow = true              -- horizontal split вниз
-
+opt.statusline:append(" %y")       -- filetype at the end of statusline
 
 -- Autocomplete --
 -- opt.completeopt = "fuzzy,menuone,noselect,popup,preview" -- add 'popup' for docs (sometimes)
