@@ -44,9 +44,23 @@ local function pandoctoword()
   local confdir = vim.fn.shellescape(vim.fn.stdpath("config"))
   local refstyle = confdir .. "/lua/assets/mystyle.docx"
   local luafilter = confdir .. "/lua/assets/highlight.lua"
-  vim.cmd(":w")
-  vim.cmd("!pandoc " .. fileesc .. " -o " .. outfileesc .. " --reference-doc=" .. refstyle .. " --lua-filter=" .. luafilter)
+  vim.cmd(":w | !pandoc " .. fileesc .. " -o " .. outfileesc .. " --reference-doc=" .. refstyle .. " --lua-filter=" .. luafilter)
 end
 -- map("n", "<leader>pw", ":w | !pandoc fnameescape(expand('%:p')) -o fnameescape(expand(%:r).docx<CR>", "Export to Word")
 map("n", "<leader>pw", pandoctoword, "Export to Word")
 
+-- LSP floating window
+map("n", "K", function() vim.lsp.buf.hover { border = "rounded", max_height = 25, max_width = 120 } end, "Hover documentation")
+-- vim.diagnostic.config {
+--   signs = true,
+--   underline = true,
+--   virtual_text = false,
+--   virtual_lines = false,
+--   update_in_insert = true,
+--   float = {
+--     -- UI.
+--     header = false,
+--     border = 'rounded',
+--     focusable = true,
+--   }
+-- }

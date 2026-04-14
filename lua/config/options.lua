@@ -47,7 +47,7 @@ opt.fileencoding = "utf-8"         -- Кодировка файлов
 
 
 -- Behavior settings --
-opt.errorbells = flase             -- No error bells
+opt.errorbells = false             -- No error bells
 -- opt.mouse = "a" -- Включить мышь во всех режимах
 opt.mouse = "n"
 opt.timeoutlen = 400 -- Время ожидания комбинаций клавиш (мс)
