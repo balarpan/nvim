@@ -5,6 +5,7 @@ return {
   keys = {
     -- Loads Telescope when pressing <leader>ff
     { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+    { "<leader>z=", "<cmd>Telescope spell_suggest theme=cursor<cr>", desc = "Spell suggestions" },
   },
 }
 

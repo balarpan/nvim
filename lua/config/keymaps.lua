@@ -43,9 +43,9 @@ local function pandoctoword()
   local outfileesc = vim.fn.shellescape(outfile)
   local confdir = vim.fn.shellescape(vim.fn.stdpath("config"))
   local refstyle = confdir .. "/lua/assets/mystyle.docx"
-  local luafiler = confdir .. "/lua/assets/highlight.lua"
+  local luafilter = confdir .. "/lua/assets/highlight.lua"
   vim.cmd(":w")
-  vim.cmd("!pandoc " .. fileesc .. " -o " .. outfileesc .. " --reference-doc=" .. refstyle .. " --lua-filter=" .. luafiler)
+  vim.cmd("!pandoc " .. fileesc .. " -o " .. outfileesc .. " --reference-doc=" .. refstyle .. " --lua-filter=" .. luafilter)
 end
 -- map("n", "<leader>pw", ":w | !pandoc fnameescape(expand('%:p')) -o fnameescape(expand(%:r).docx<CR>", "Export to Word")
 map("n", "<leader>pw", pandoctoword, "Export to Word")
