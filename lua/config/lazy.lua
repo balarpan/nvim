@@ -1,6 +1,6 @@
-require("config.options")
-require("config.keymaps")
-require("config.lsp")
+-- require("config.options")
+-- require("config.keymaps")
+-- require("config.lsp")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -38,6 +38,7 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+
 -- vim.cmd [[colorscheme kanagawa]]
 vim.cmd [[colorscheme nightfox]]
 

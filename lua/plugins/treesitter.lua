@@ -38,25 +38,23 @@ return {
     require('nvim-treesitter').install(languages)
     auto_install = false,
 
-    -- Treesitter features for installed languages must be enabled manually
-    vim.api.nvim_create_autocmd("FileType", {
-      pattern = languages,
-      callback = function()
-        -- local filetype = vim.bo.filetype
-        -- require('nvim-treesitter').install(filetype)
-        -- Enable native Neovim treesitter highlighting
-        vim.treesitter.start()
+        -- Treesitter features for installed languages must be enabled manually
+        vim.api.nvim_create_autocmd("FileType", {
+          pattern = languages,
+          callback = function()
+            -- local filetype = vim.bo.filetype
+            -- require('nvim-treesitter').install(filetype)
+            -- Enable native Neovim treesitter highlighting
+            vim.treesitter.start()
 
-        -- Configure code folding
-        -- vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-        vim.wo.foldmethod = "expr"
-        -- vim.wo.foldlevel = 99
+            -- Configure code folding
+            -- vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+            vim.wo.foldmethod = "expr"
+            -- vim.wo.foldlevel = 99
 
-        -- Enable treesitter-based indentation
-        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-      end,
-    })
-
+            -- Enable treesitter-based indentation
+            vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+          end,
+        })
   end,
 }
-

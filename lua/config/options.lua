@@ -51,7 +51,8 @@ opt.errorbells = false             -- No error bells
 -- opt.mouse = "a" -- Включить мышь во всех режимах
 opt.mouse = "n"
 opt.timeoutlen = 400 -- Время ожидания комбинаций клавиш (мс)
-
+opt.foldenable = false         -- Disable folding
+opt.foldlevel = 99              -- Set high foldlevel to keep all files open
 
 -- Spell checking --
 -- opt.spelllang = "en_us"
