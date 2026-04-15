@@ -1,3 +1,5 @@
 return {
-  "vague-theme/vague.nvim"
+  "vague-theme/vague.nvim",
+  event = "VeryLazy",
+  lazy = true
 }
