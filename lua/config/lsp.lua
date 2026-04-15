@@ -68,4 +68,5 @@ vim.lsp.enable("docker_language_server")
 -- vim.lsp.enable("yamlls")
 
 -- Javascript, Typescript, etc.
-vim.lsp.enable("eslint")
+-- vim.lsp.enable("eslint")
+vim.lsp.enable("ts_ls")
