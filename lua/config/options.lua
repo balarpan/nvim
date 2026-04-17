@@ -26,6 +26,9 @@ opt.wrap = false                   -- Автоматический перено�
 opt.splitright = true              -- vertical split вправо
 opt.splitbelow = true              -- horizontal split вниз
 opt.statusline:append(" %y")       -- filetype at the end of statusline
+-- Disable inside pickers some ugly out-of-the-box color scheme's
+vim.cmd([[set wildignore+=blue.vim,delek.vim,elflord.vim,industry.vim,koehler.vim,morning.vim,murphy.vim,peachpuff.vim,ron.vim,shine.vim,slate.vim,sorbet.vim,torte.vim,zaibatsu.vim,zellner.vim]])
+
 
 -- Autocomplete --
 -- opt.completeopt = "fuzzy,menuone,noselect,popup,preview" -- add 'popup' for docs (sometimes)

@@ -9,9 +9,16 @@ return {
   },
   config = function()
     require("telescope").setup({
+      defaults = {
+        layout_strategy = 'horizontal',
+        layout_config = { preview_width = 0.6 },
+      },
       pickers = {
         colorscheme = {
           enable_preview = true,
+          preview_width = 0.7,
+          width = 0.2, -- Make it narrow
+          height = 0.3,
         }
       }
     })
