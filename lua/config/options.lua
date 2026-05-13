@@ -52,7 +52,8 @@ opt.fileencoding = "utf-8"         -- Кодировка файлов
 -- Behavior settings --
 opt.errorbells = false             -- No error bells
 -- opt.mouse = "a" -- Включить мышь во всех режимах
-opt.mouse = "n"
+-- opt.mouse = "n"
+opt.mouse = ""
 opt.timeoutlen = 400 -- Время ожидания комбинаций клавиш (мс)
 opt.foldenable = false         -- Disable folding
 opt.foldlevel = 99              -- Set high foldlevel to keep all files open
