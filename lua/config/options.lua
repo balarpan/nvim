@@ -10,7 +10,7 @@ opt.smartcase = true               -- Но учитывать, если в за�
 -- Visual settings --
 opt.termguicolors = true           -- Поддержка 24-bit цветов
 opt.number = true                  -- Line numbers
-opt.relativenumber = false         -- Relative line numbers
+opt.relativenumber = true         -- Relative line numbers
 opt.expandtab = true               -- Преобразовать табы в пробелы
 opt.smarttab = true                -- Умная вставка табов
 opt.smartindent = true             -- Автоматические отступы
