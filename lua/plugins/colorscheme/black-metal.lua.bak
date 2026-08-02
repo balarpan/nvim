@@ -82,6 +82,6 @@ return {
     })
     -- Convenience function that simply calls `:colorscheme <theme>` with the theme
     -- specified in your config.
-    require("black-metal").load()
+    -- require("black-metal").load()
   end,
 }
