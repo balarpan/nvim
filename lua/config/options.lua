@@ -55,10 +55,23 @@ opt.errorbells = false             -- No error bells
 -- opt.mouse = "n"
 opt.mouse = ""
 opt.timeoutlen = 400 -- Время ожидания комбинаций клавиш (мс)
+
+-- Code Folding --
 opt.foldenable = true
 opt.foldmethod = "expr"
 opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-opt.foldlevel = 99    -- Set high foldlevel to keep all files open
+opt.foldlevel = 99       -- Set high fold level to keep all files open
+opt.foldlevelstart = 99
+opt.foldnestmax = 1      -- fold only one level down
+-- fix issue when open new file and no folding method
+vim.api.nvim_create_autocmd({ "BufEnter", "FileType" }, {
+  callback = function()
+    if vim.fn.expand("%:t") ~= "" then
+      vim.opt_local.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+      pcall(vim.cmd, "normal! zx")
+    end
+  end,
+})
 
 -- Spell checking --
 -- opt.spelllang = "en_us"
