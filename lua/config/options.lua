@@ -55,8 +55,10 @@ opt.errorbells = false             -- No error bells
 -- opt.mouse = "n"
 opt.mouse = ""
 opt.timeoutlen = 400 -- Время ожидания комбинаций клавиш (мс)
-opt.foldenable = false         -- Disable folding
-opt.foldlevel = 99              -- Set high foldlevel to keep all files open
+opt.foldenable = true
+opt.foldmethod = "expr"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+opt.foldlevel = 99    -- Set high foldlevel to keep all files open
 
 -- Spell checking --
 -- opt.spelllang = "en_us"
