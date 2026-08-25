@@ -62,7 +62,7 @@ opt.foldmethod = "expr"
 opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 opt.foldlevel = 99       -- Set high fold level to keep all files open
 opt.foldlevelstart = 99
-opt.foldnestmax = 1      -- fold only one level down
+-- opt.foldnestmax = 1      -- fold only one level down
 -- fix issue when open new file and no folding method
 vim.api.nvim_create_autocmd({ "BufEnter", "FileType" }, {
   callback = function()
